@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "styles.css",
+	"file": "main.css",
 	"sources": [
-		"../../src/scss/styles.scss",
+		"../../src/scss/main.scss",
 		"../../src/scss/_header.scss",
 		"../../src/scss/_content.scss",
 		"../../src/scss/_footer.scss"

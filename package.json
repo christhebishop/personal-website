@@ -9,7 +9,8 @@
     "sass:build": "npm-run-all -p build-task:*",
     "sass:watch": "chokidar 'src/scss/**/*.scss' -c 'npm run sass:build'",
     "sass:serve": "browser-sync start --server --browser 'google chrome' --files 'dist/css/*.css, dist/js/*.js'",
-    "uglify": "mkdir -p dist/js && uglifyjs src/js/*.js -b -o dist/js/app.js && uglifyjs src/js/*.js -c -o dist/js/app.min.js",
+    "pugtohtml": "pug -P -o . src/pug/*.pug",
+    "uglify": "mkdir -p dist/js && uglifyjs src/js/*.js -b -o dist/js/main.js && uglifyjs src/js/*.js -c -o dist/js/main.min.js",
     "dev": "npm-run-all -p sass:*"
   },
   "author": "Christopher J. Bishop",
@@ -21,6 +22,8 @@
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.0.2",
     "postcss-cli": "^4.1.0",
+    "pug": "^2.0.0-rc.2",
+    "pug-cli": "^1.0.0-alpha6",
     "uglify-js": "^3.0.19"
   }
 }
