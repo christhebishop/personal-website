@@ -1,0 +1,26 @@
+{
+  "name": "christhebishop",
+  "version": "1.0.0",
+  "description": "Personal website for Christopher J. Bishop",
+  "main": "index.js",
+  "scripts": {
+    "build-task:scss-compile": "node-sass-chokidar --source-map true --output-style compressed src/scss/ -o dist/css",
+    "build-task:autoprefixer": "postcss dist/css/*.css --use autoprefixer -d dist/css",
+    "sass:build": "npm-run-all -p build-task:*",
+    "sass:watch": "chokidar 'src/scss/**/*.scss' -c 'npm run sass:build'",
+    "sass:serve": "browser-sync start --server --browser 'google chrome' --files 'dist/css/*.css, dist/js/*.js'",
+    "uglify": "mkdir -p dist/js && uglifyjs src/js/*.js -b -o dist/js/app.js && uglifyjs src/js/*.js -c -o dist/js/app.min.js",
+    "dev": "npm-run-all -p sass:*"
+  },
+  "author": "Christopher J. Bishop",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^7.1.1",
+    "browser-sync": "^2.18.12",
+    "chokidar-cli": "^1.2.0",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.0.2",
+    "postcss-cli": "^4.1.0",
+    "uglify-js": "^3.0.19"
+  }
+}
