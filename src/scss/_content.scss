@@ -1,0 +1,7 @@
+.main {
+  @include container;
+
+  .intro {
+    text-align: center;
+  }
+}

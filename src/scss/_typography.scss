@@ -1,0 +1,76 @@
+//Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $arvo;
+  color: $black;
+  line-height: 1.5;
+  margin: 1.5rem 0;
+
+  a {
+    color: $black;
+    text-decoration: none;
+  }
+}
+// Fluid Headings
+// Change scale
+$mod_1: 1.17; //Mobile
+$mod_2: 1.333; //Desktop
+
+// Calculate Modular Scale
+$min_width: 768px;
+$max_width: 1024px;
+$min_font: 16px;
+
+$h1-min: $mod_1*$mod_1*$mod_1*$mod_1 * $min_font;
+$h1-max: $mod_2*$mod_2*$mod_2*$mod_2 * $min_font;
+
+$h2-min: $mod_1*$mod_1*$mod_1 * $min_font;
+$h2-max: $mod_2*$mod_2*$mod_2 * $min_font;
+
+$h3-min: $mod_1*$mod_1 * $min_font;
+$h3-max: $mod_2*$mod_2 * $min_font;
+
+$h4-min: $mod_1* $min_font;
+$h4-max: $mod_2 * $min_font;
+
+$h5-min: $min_font;
+$h5-max: $min_font;
+
+$h6-min: ($min_font / $mod_1);
+$h6-max: ($min_font / $mod_2);
+
+h1{
+	@include fluid-type($min_width, $max_width, $h1-min, $h1-max);
+}
+
+h2{
+	@include fluid-type($min_width, $max_width, $h2-min, $h2-max);
+}
+
+h3{
+	@include fluid-type($min_width, $max_width, $h3-min, $h3-max);
+}
+
+h4{
+	@include fluid-type($min_width, $max_width, $h4-min, $h4-max);
+}
+
+h5{
+	@include fluid-type($min_width, $max_width, $h5-min, $h5-max);
+}
+
+h6{
+	@include fluid-type($min_width, $max_width, $h6-min, $h6-max);
+}
+
+p {
+  margin: 1rem 0;
+}
+
+ul {
+  list-style-position: inside;
+}
