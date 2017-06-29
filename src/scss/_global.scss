@@ -5,16 +5,26 @@
   padding: 0;
 }
 
-@keyframes fade-in {
-  0% {opacity: 0;}
-  100% { opacity: 1; }
-}
-
 body {
   font-size: 16px;
   color: $black;
-  font-family: $cutive;
+  font-family: $sourceSans;
   line-height: 1.5;
+  font-weight: 400;
   @include fluid-type(37.5rem, 80rem, 1rem, 1.125rem);
-  animation: fade-in 0.5s ease-in;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+  transition: color 0.15s ease-in;
+
+  &:hover {
+    color: lighten($blue, 8%);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

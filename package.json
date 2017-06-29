@@ -10,7 +10,7 @@
     "sass:watch": "chokidar 'src/scss/**/*.scss' -c 'npm run sass:build'",
     "sass:serve": "browser-sync start --server --serveStatic --extensions 'html' --browser 'google chrome' --files '.'",
     "pugtohtml": "pug -P -w src/pug/*.pug -o . || true",
-    "uglify": "mkdir -p dist/js && uglifyjs src/js/**/*.js -b -o dist/js/main.js && uglifyjs src/js/**/*.js -c -o dist/js/main.min.js",
+    "uglify": "mkdir -p dist/js && uglifyjs src/js/**/*.js src/js/*.js -b -o dist/js/main.js && uglifyjs src/js/**/*.js src/js/*.js -c -o dist/js/main.min.js",
     "dev": "npm-run-all -p sass:* pugtohtml"
   },
   "author": "Christopher J. Bishop",

@@ -2,8 +2,83 @@ header {
   @include container;
   text-align: center;
 
+  h1 {
+    display: inline-block;
+    position: relative;
+
+    a {
+      vertical-align: middle;
+      padding: 8px 20px;
+      display: block;
+      z-index: 1;
+      border-width: 2px 0 2px 0;
+      border-color: $blue;
+      border-style: solid;
+      transition: color 0.2s ease-in;
+
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        background: $blue;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 45%;
+        height: 100%;
+        transform-origin: left top;
+        transform: scaleY(0);
+        transition: transform 0.25s ease;
+        z-index: -1;
+      }
+
+      &:after {
+        width: 55%;
+        left: auto;
+        right: 0;
+        transform-origin: right bottom;
+      }
+
+      &:hover {
+        color: #fff;
+        //box-shadow: 3px 7px 7px 0 rgba($black, .15);
+      }
+
+      &:hover:before,
+      &:hover:after {
+        transform: scaleY(1);
+      }
+    }
+  }
+
   ul li {
     list-style: none;
     display: inline-block;
+    a {
+      display: block;
+      vertical-align: middle;
+      font-size: rem(20);
+      @include fluid-type(37.5rem, 80rem, 1rem, 1.25rem);
+      padding: 5px 10px;
+
+      &:after {
+        content:'';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $blue;
+        margin: 0 auto;
+        transition: width 0.15s ease-in;
+      }
+
+      &:hover:after {
+        width: 80%;
+      }
+
+      &.active:after {
+        width: 80%;
+        transition-delay: 0.15s;
+      }
+    }
   }
 }

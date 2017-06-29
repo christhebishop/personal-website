@@ -47,3 +47,10 @@
     max-width: 1100px;
   }
 }
+
+//Rem calc from https://css-tricks.com/snippets/sass/px-to-em-functions/
+$browser-context: 16; // Default
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}

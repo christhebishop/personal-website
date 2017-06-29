@@ -2973,3 +2973,9 @@
         return a.$ === r && (a.$ = Wb), b && a.jQuery === r && (a.jQuery = Vb), r;
     }, b || (a.jQuery = a.$ = r), r;
 });
+
+$(document).ready(function() {});
+
+$(function() {
+    $('nav ul li a[href^="' + location.pathname.split("/")[1] + '"]').addClass("active");
+});
