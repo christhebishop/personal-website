@@ -6,6 +6,20 @@ footer {
     li {
       list-style: none;
       display: inline-block;
+      line-height: 1;
+      vertical-align: middle;
+
+      a {
+        font-size: rem(28);
+        padding: 0 5px;
+        overflow: hidden;
+        line-height: 1;
+        display: block;
+
+        span {
+          display: none;
+        }
+      }
     }
   }
 }

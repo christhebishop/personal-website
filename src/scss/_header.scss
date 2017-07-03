@@ -1,5 +1,6 @@
 header {
   @include container;
+  padding-bottom: 0;
   text-align: center;
 
   h1 {
@@ -71,8 +72,17 @@ header {
         transition: width 0.15s ease-in;
       }
 
-      &:hover:after {
-        width: 80%;
+      // &:hover:after {
+      //   width: 80%;
+      // }
+      @media (pointer: fine) {
+        &:hover {
+          color: $blue;
+        }
+        
+        &:hover:after {
+          width: 80%;
+        }
       }
 
       &.active:after {
