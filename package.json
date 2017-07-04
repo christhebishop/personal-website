@@ -8,7 +8,7 @@
     "build-task:autoprefixer": "postcss dist/css/*.css --use autoprefixer -d dist/css",
     "sass:build": "npm-run-all -p build-task:*",
     "sass:watch": "chokidar 'src/scss/**/*.scss' -c 'npm run sass:build'",
-    "sass:serve": "browser-sync start --server --serveStatic --extensions 'html' --browser 'google chrome' --files '.'",
+    "sass:serve": "browser-sync start --server --serveStatic --extensions 'html' --browser 'google chrome' --files 'dist/.'",
     "pugtohtml": "pug -P -w src/pug/*.pug -o . || true",
     "uglify": "mkdir -p dist/js && uglifyjs src/js/**/*.js src/js/*.js -b -o dist/js/main.js && uglifyjs src/js/**/*.js src/js/*.js -c -o dist/js/main.min.js",
     "dev": "npm-run-all -p sass:* pugtohtml"

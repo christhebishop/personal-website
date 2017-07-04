@@ -12,6 +12,35 @@
     margin-top: 0;
   }
 
+  .project-link,
+  .view-link {
+    display: inline-block;
+    margin: .5rem 0;
+    padding: 5px 15px 5px 10px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    font-size: rem(12);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background 0.15s ease-in,
+                color 0.15s ease-in;
+
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    &:hover {
+      background: $blue;
+      color: #fff;
+    }
+
+    .icon {
+      margin-right: 5px;
+    }
+  }
+
   // Homepage
   .intro {
     text-align: center;
@@ -52,30 +81,6 @@
 
   // Projects
   &.projects {
-    .project-link {
-      display: inline-block;
-      margin: .5rem 0;
-      padding: 5px 15px 5px 10px;
-      border-top: 1px solid;
-      border-bottom: 1px solid;
-      font-size: rem(12);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      transition: background 0.15s ease-in,
-                  color 0.15s ease-in;
-
-      &:after {
-        content: '';
-        display: table;
-        clear: both;
-      }
-
-      &:hover {
-        background: $blue;
-        color: #fff;
-      }
-    }
-
     h3 {
       display: inline-block;
       border: 2px solid $blue;
