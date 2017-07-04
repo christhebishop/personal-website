@@ -16,6 +16,10 @@
   .intro {
     text-align: center;
 
+    h3 {
+      margin-top: 0;
+    }
+
     p {
       font-size: rem(22);
       @include fluid-type(37.5rem, 80rem, 1rem, 1.375rem);
@@ -49,13 +53,26 @@
   // Projects
   &.projects {
     .project-link {
-      display: block;
-      margin: 1rem 0;
+      display: inline-block;
+      margin: .5rem 0;
+      padding: 5px 15px 5px 10px;
+      border-top: 1px solid;
+      border-bottom: 1px solid;
+      font-size: rem(12);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: background 0.15s ease-in,
+                  color 0.15s ease-in;
 
       &:after {
         content: '';
         display: table;
         clear: both;
+      }
+
+      &:hover {
+        background: $blue;
+        color: #fff;
       }
     }
 
