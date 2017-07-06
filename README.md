@@ -1,11 +1,39 @@
 # Personal Website
 
-TODO: Write a project description
+My personal website, christhebishop.com, built to display my work and experience.
+
+Built using the following:
+
+* HTML
+* pugjs for HTML templating
+* CSS/SCSS
+* jQuery
+* npm scripts to compile my SCSS, render pug templates, spin up local dev server with Browsersync, and minify production assets
+Git
 
 ## Installation
+Requirements:
+* Node.js
+* npm
 
-TODO: Describe the installation process
+Clone the repo to your local machine:
+```
+$ git clone https://github.com/christhebishop/personal-website
+```
+
+Install Dependencies:
+```
+$ npm install
+```
 
 ## Usage
 
-TODO: Write usage instructions
+To compile SCSS, render pug templates, and spin up Browsersync, run the following:
+```
+$ npm run dev
+```
+
+To build, concatenate and minify JS, run:
+```
+$ npm run uglify
+```
