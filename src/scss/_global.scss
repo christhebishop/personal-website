@@ -12,7 +12,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
   @include fluid-type(37.5rem, 80rem, 1rem, 1.125rem);
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
