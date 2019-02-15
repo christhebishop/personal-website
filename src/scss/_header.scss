@@ -6,6 +6,7 @@ header {
   h1 {
     display: inline-block;
     position: relative;
+    letter-spacing: 2px;
 
     a {
       //vertical-align: middle;
@@ -50,6 +51,9 @@ header {
         transform: scaleY(1);
       }
     }
+  }
+  ul {
+    margin-left: 0;
   }
 
   ul li {

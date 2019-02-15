@@ -78,6 +78,12 @@
       }
     }
 
+    p {
+      border-left: 2px solid $blue;
+      padding-left: 10px;
+      margin-left: .5em;
+    }
+
     .job-title {
       text-transform: uppercase;
       font-weight: 600;
